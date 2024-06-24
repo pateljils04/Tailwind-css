@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="flex justify-between items-center mt-[45px] md:ps-6 md:pe-6 lg:ps-[135px] lg:pe-[135px]">
+        <div class="logo ps-3">
+            <img src="https://tailwindfromscratch.com/website-projects/bookmark/images/logo-bookmark.svg" alt="">
+        </div>
+
+        <!-- <div class="hidden md:block">
+            <ul
+                class="flex flex-col bg-black md:bg-white p-10 md:p-0 md:flex-row absolute md:static justify-center md:items-center">
+                <li><a href="" class="me-10 text-white md:text-gray-400 hover:text-red-500">FEATURES</a></li>
+                <li><a href="" class="me-10 text-white md:text-gray-400 hover:text-red-500">DOWNLOAD</a></li>
+                <li><a href="" class="text-white md:text-gray-400 hover:text-red-500">FAQ</a></li>
+            </ul>
+        </div> -->
+        <div class="hidden md:flex space-x-10">
+            <ul
+                class="flex space-x-10 items-center font-medium text-gray-400">
+                <li><a href="" class="text-gray-400 hover:text-red-500">FEATURES</a></li>
+                <li><a href="" class="text-gray-400 hover:text-red-500">DOWNLOAD</a></li>
+                <li><a href="" class="text-gray-400 hover:text-red-500">FAQ</a></li>
+            </ul>
+        </div>
+
+
+        <div class="btn">
+            <button
+                class="hidden md:block bg-red-500 text-white px-8 rounded-lg py-2 border-2 border-red-500 hover:bg-white hover:text-red-500">LOGIN</button>
+        </div>
+
+        <div class="block md:hidden">
+            <ion-icon name="menu" onclick="handelclick(this)" id="ic" class="text-4xl"></ion-icon>
+        </div>
+
+       
+    </nav>
+    <div class="nav-link px-6 py-5 hidden md:hidden text-black">
+        <ul class="flex flex-col text-center font-medium">
+            <li class="my-2"><a href="">FEATURES</a></li>
+            <hr class="border-gray-400">
+            <li class="my-2"><a href="">DOWNLOAD</a></li>
+            <hr class="border-gray-400">
+            <li class="my-2"><a href="">FAQ</a></li>
+            <hr class="border-gray-400">
+        </ul>
+    </div>
+
+    <!-- home pages -->
+    <div class="home-page lg:ps-[135px] mt-10 lg:mt-[115px] lg:pe-[135px] flex flex-col lg:flex-row mb-10 ">
+        <div class="cont-home text-center lg:text-start w-[100%] lg:w-[505px]">
+            <h1 class="text-3xl lg:text-6xl font-bold ">A Simple Bookmark Manager</h1>
+            <p class="text-xl lg:text-2xl pt-10 text-gray-400 font-medium lg:text-start ">A clean and simple interface
+                to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it
+                for free.</p>
+            <div class="home-btn mt-10 flex justify-center lg:justify-start">
+                <button
+                    class="bg-blue-600 rounded-md shadow-lg px-3 ms-[8px] lg:px-5 py-4 lg:text-lg text-white border-2 border-blue-600 hover:text-blue-600 hover:bg-white font-medium">Get
+                    it on Chrome</button>
+                <button
+                    class="bg-gray-300 ms-1 lg:ms-4 px-3 lg:px-5 py-4 shadow-lg border-2 lg:text-lg border-gray-300 hover:bg-white hover:text-gray-500 font-medium rounded-md">Get
+                    it on Firefox</button>
+            </div>
+        </div>
+
+        <div class="image-home lg:ps-8 w-[100%] mt-10 lg:w-[505px]">
+            <img src="https://tailwindfromscratch.com/website-projects/bookmark/images/illustration-hero.svg"
+                class="mx-auto" height="500px" alt="">
+        </div>
+    </div>
+
+
+    <!-- Features -->
+
+    <div class="f-cont mx-auto mt-[40px] w-[100%] md:w-[500px]">
+        <h1 class="text-center text-4xl font-bold">Features</h1>
+        <p class="text-center pt-7 text-gray-500">Our aim is to make it quick and easy for you to access your favourite
+            websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        <div class="fea-text flex flex-col justify-center items-center md:flex-row md:justify-between mt-[60px] ">
+            <p class="pb-4 text-gray-600 md:border-red-500 md:pb-5 md:pt-2 md:border-b-4 hover:text-red-500">Simple Bookmarking
+            </p>
+            <p class="pb-4 text-gray-600 hover:text-red-500">Speedy Searching</p>
+            <p class="pb-4 text-gray-600 hover:text-red-500">Easy Sharing</p>
+        </div>
+        <hr class="hidden md:block">
+    </div>
+
+    <div class="features-pg mt-[50px] mb-[50px] lg:ps-[135px] lg:pe-[135px] flex flex-col md:flex-row justify-center ">
+        <div class="feat-img mx-auto w-[85%] md:ps-6 md:w-[505px] lg:pe-6">
+            <img src="https://tailwindfromscratch.com/website-projects/bookmark/images/illustration-features-tab-1.svg"
+                class="mx-auto" alt="">
+        </div>
+        <div class="md:ps-8 feat-cont text-center md:text-start mt-10 md:mt-0 w-[100%] md:w-[500px]">
+            <h1 class="text-3xl font-bold ">Bookmark in one click</h1>
+            <p class="text-gray-400 pt-8">Organize your bookmarks however you like. Our simple drag-and-drop interface
+                gives you complete control over how you manage your favourite sites.</p>
+            <button
+                class="mt-8 md:mt-[55px] bg-blue-600 text-white text-lg font-medium px-4 rounded-md py-2 border-2 border-blue-600 hover:text-blue-600 hover:bg-white">More
+                Info</button>
+        </div>
+    </div>
+
+
+    <!-- extension page -->
+    <div class="ext-cont w-[100%] md:w-[500px] mt-[100px] mx-auto">
+        <h1 class="text-center text-4xl font-bold pb-5">Download the extension</h1>
+        <p class="text-center text-gray-400">We've got more browsers in the pipeline. Please do let us know if you've
+            got a favourite you'd like us to prioritize.</p>
+    </div>
+
+
+    <div class="extension-box mt-[100px] mb-[100px] lg:ps-[135px] lg:pe-[135px] flex flex-col md:flex-row justify-center items-center md:justify-between">
+        <div class="shadow-xl text-center w-[85%] ms-5 md:p-4 md:w-[290px]">
+            <img class="mx-auto pt-4 mb-10"
+                src="https://tailwindfromscratch.com/website-projects/bookmark/images/logo-chrome.svg" height="100px"
+                alt="">
+            <h1 class="text-xl font-bold">Add to Chrome</h1>
+            <p class="text-gray-400 border-b-blue-100 border-b-4 pt-2 pb-4 border-dotted">Minimum Version 62</p>
+            <button
+                class="mt-5 mb-5 bg-blue-600 text-white border-2 border-blue-600 px-10 rounded-md py-3 hover:bg-white hover:text-blue-600">Add
+                & Install Extension</button>
+        </div>
+
+
+        <div class="shadow-xl text-center w-[85%] md:w-[290px] mt-[80px] md:p-4 md:ms-5 md:mt-0">
+            <img class="mx-auto pt-4 mb-10"
+                src="https://tailwindfromscratch.com/website-projects/bookmark/images/logo-firefox.svg" height="100px"
+                alt="">
+            <h1 class="text-xl font-bold">Add to Firefox</h1>
+            <p class="text-gray-400 border-b-blue-100 border-b-4 pt-2 pb-4 border-dotted">Minimum Version 55</p>
+            <button
+                class="mt-5 mb-5 bg-blue-600 text-white border-2 border-blue-600 px-10 rounded-md py-3 hover:bg-white hover:text-blue-600">Add
+                & Install Extension</button>
+        </div>
+
+
+        <div class="shadow-xl text-center w-[85%] md:w-[290px] mt-[80px] md:p-4 md:ms-5 md:mt-0">
+            <img class="mx-auto pt-4 mb-10"
+                src="https://tailwindfromscratch.com/website-projects/bookmark/images/logo-opera.svg" height="100px"
+                alt="">
+            <h1 class="text-xl font-bold">Add to Opera</h1>
+            <p class="text-gray-400 border-b-blue-100 border-b-4 pt-2 pb-4 border-dotted">Minimum Version 46</p>
+            <button
+                class="mt-5 mb-5 bg-blue-600 text-white border-2 border-blue-600 px-10 rounded-md py-3 hover:bg-white hover:text-blue-600">Add
+                & Install Extension</button>
+        </div>
+    </div>
+
+
+    <!-- Frequently Asked Questions -->
+
+    <!-- <div class="faq-cont mx-auto mt-[150px] w-[100%] lg:w-[500px]">
+        <h1 class="text-center text-4xl font-bold pb-6">Frequently Asked Questions</h1>
+        <p class="text-center ps-10 pe-10">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+    </div> -->
+
+
+    <div class="bg-blue-600">
+        <div class=" mx-auto text-center w-[100%] md:w-[500px] pb-[80px]">
+            <p class="text-white pb-6 text-xl pt-[80px]">35,000+ ALREADY JOINED</p>
+            <h1 class="text-white text-4xl pb-6 font-bold">Stay up-to-date with what we're doing</h1>
+            <div class="input-box">
+                <input type="text" class="px-4 py-2 rounded-md" placeholder="Enter your email address">
+                <button class="bg-red-500 mt-4 lg:mt-0 px-6 py-2 rounded-md text-white font-bold">Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-slate-800 lg:ps-[135px] md:ps-6 md:pe-6 lg:pe-[135px] pt-[55px] text-center flex flex-col md:flex-row justify-between pb-[55px]">
+        <div class="main-footer flex flex-col md:flex-row ">
+            <img src="https://tailwindfromscratch.com/website-projects/bookmark/images/logo-bookmark-footer.svg" class="mx-auto pt-1 h-[25px] w-[148px]" alt="">
+            <p class="md:ms-10 pt-10 md:pt-0 text-lg text-gray-500 hover:text-red-500">FEATURES</p>
+            <p class="md:ms-10 pt-10 md:pt-0 text-lg text-gray-500 hover:text-red-500">DOWNLOAD</p>
+            <p class="md:ms-10 pt-10 md:pt-0 text-lg text-gray-500 hover:text-red-500">FAQ</p>
+        </div>
+        <div class="footer-icon flex justify-center  pt-10 md:pt-0  ">
+            <i class="fa-brands fa-square-facebook text-[30px] text-white hover:text-red-500 me-10"></i>
+            <i class="fa-brands fa-twitter text-[30px] text-white hover:text-red-500"></i>
+        </div>
+    </div>
+
+
+      
+      
+      
+      
+      
+      
+
+    <script>
+        const navlink = document.querySelector(".nav-link")
+        function handelclick(e) {
+            e.name = e.name == "menu" ? "close" : "menu"
+            if (e.name == "close") {
+                navlink.classList.add("block")
+                navlink.classList.remove("hidden")
+            } else {
+                navlink.classList.add("hidden")
+                navlink.classList.remove("block")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

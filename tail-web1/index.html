@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="fixed w-full z-10 py-4 bg-white flex justify-between items-center ps-[60px] pe-[60px] shadow-sm">
+        <div class="logo-box">
+            <a href="#"><span class="text-[30px] text-gray-700 font-medium">Yummy</span><span
+                    class="p-0 text-[#ce1212] text-[33px]">.</span></a>
+        </div>
+
+        <div class="menudiv hidden lg:block">
+            <ul class="bg-white w-full pb-3 ps-10 flex gap-8 lg:flex-row flex-col absolute lg:static justify-center top-[100%] left-[-1%] lg:items-center  ">
+                <li><a href="#" class=" pb-1 text-md text-gray-700 border-[#ce1212] border-b-2 ">Home</a></li>
+                <li><a href="#" class=" pb-1 text-md text-gray-500 border-[#ce1212] hover:border-b-2 ">About</a></li>
+                <li><a href="#" class=" pb-1 text-md text-gray-500 border-[#ce1212] hover:border-b-2 ">Menu</a></li>
+                <li><a href="#" class=" pb-1 text-md text-gray-500 border-[#ce1212] hover:border-b-2 ">Events</a></li>
+                <li><a href="#" class=" pb-1 text-md text-gray-500 border-[#ce1212] hover:border-b-2 ">Chefs</a></li>
+                <li><a href="#" class=" pb-1 text-md text-gray-500 border-[#ce1212] hover:border-b-2 ">Contact</a></li>
+            </ul>
+        </div>
+      
+
+        <div>
+            <button class=" bg-[#ce1212] hidden lg:block text-white px-4 py-2 border-2 border-[#ce1212] hover:text-[#ce1212] hover:bg-white  rounded-3xl ">Book a Table</button>
+        </div>
+        <div class="lg:hidden">
+            <ion-icon name="menu" onclick="handelclick(this)" id="menu" class="text-4xl"></ion-icon>
+        </div>
+    </nav>
+
+
+    <!-- Home page -->
+    <div class=" relative top-10 home-pg text-center lg:ps-[60px] lg:pe-[60px] lg:flex lg:justify-between items-center pt-[60px] pb-5 lg:py-[60px] bg-gray-200">
+        <div class="home-cont w-[100%] lg:w-[580px] ">
+            <h1 class="lg:text-[45px] font-serif m-0">Enjoy Your Healthy Delicious Food</h1>
+            <p class="text-gray-500 text-xl">We are team of talented designers making websites with Bootstrap</p>
+            <div class="home-btn flex justify-center items-center mt-7">
+                <button class="bg-[#ce1212] text-white px-4 py-2 rounded-3xl ">Book a Table</button>
+                <a class=" ps-3  text-xl hover:text-[#ce1212]" href="./images/video1.mp4"><i
+                        class="fa-regular fa-circle-play pe-2 text-2xl text-[#ce1212]"></i>Watch Video</a>
+            </div>
+        </div>
+        <div class="home-img flex justify-center lg:ps-[110px] mt-4 w-[100%] lg:w-[580px]">
+            <img src="./images/hero-img.png" class="animate-pulse" alt="" height="440px" width="80%">
+        </div>
+    </div>
+
+
+    <!-- About us page -->
+    <div class="mt-[55px] us-cont bg-white">
+        <h6 class="text-md text-gray-500 text-center pb-3">ABOUT US</h6>
+        <h1 class="text-center text-[40px] font-serif">Learn More <span class="text-[#ce1212]">About Us</span></h1>
+    </div>
+
+    <div class=" mt-[55px] flex justify-center flex-col lg:flex-row lg:ps-[60px] lg:pe-[60px] bg-white pb-[55px]">
+
+        <div class="about-img mx-auto w-[90%] lg:w-[700px]">
+            <img src="./images/about.jpg" alt="">
+            <div class="border-4 px-2 py-3 mt-5 border-gray-600">
+                <p class="text-[25px] text-center font-medium text-gray-600">Book a Table</p>
+                <p class="text-[25px] text-center font-medium text-[#ce1212]">+1 5589 55488 55</p>
+            </div>
+        </div>
+        <div class="about-cont mt-5 lg:ps-[70px] ps-[60px] w-[80%] lg:w-[460px]">
+            <p class="text-gray-400 font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <p class="pt-4"><i class="fa-solid fa-circle-check text-[#ce1212] pe-1"></i> Ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <p class="pt-3"><i class="fa-solid fa-circle-check text-[#ce1212] pe-1"></i> Duis aute irure dolor in
+                reprehenderit in voluptate velit.</p>
+            <p class="pt-3"><i class="fa-solid fa-circle-check text-[#ce1212] pe-1"></i> Ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
+                mastiro dolore eu fugiat nulla pariatur.</p>
+            <p class="pt-5">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident</p>
+
+
+            <iframe src="./images/video1.mp4" class="mt-5 w-[100%] lg:w-[400px] h-[300px]" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row lg:ps-[60px] lg:pe-[60px] bg-gray-100 py-[50px]">
+        <div class="bg-[#ce1212] p-7  w-[100%] lg:w-[400px] lg:me-10">
+            <h1 class="text-white font-medium text-4xl">Why Choose Yummy </h1>
+            <p class="pt-7 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores
+                sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.</p>
+
+            <div class="us-btn flex justify-center mt-2">
+                <button
+                    class="text-center px-8 py-2 text-white bg-black rounded-full hover:bg-white transition-all duration-700 hover:text-[#ce1212]">Learn
+                    More ></button>
+            </div>
+        </div>
+
+        <div class="w-[100%] pb-3 mb-4 lg:w-[253.33px] pt-[60px] ps-7 pe-7 text-center bg-white lg:me-10">
+            <i
+                class=" text-4xl fa-solid fa-clipboard-list rounded-full text-[#ce1212] bg-[#fcd7cf] px-6 py-4 hover:bg-[#ce1212] hover:text-white transition-all duration-500"></i>
+            <p class="text-xl mt-7">Corporis voluptates officia eiusmod</p>
+            <p class="text-gray-500 mt-7">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
+                aliquip</p>
+        </div>
+
+        <div class="w-[100%] pb-3 mb-4 lg:w-[253.33px] pt-[60px] ps-7 pe-7 text-center bg-white lg:me-10">
+            <i
+                class=" text-4xl fa-regular fa-gem rounded-full text-[#ce1212] bg-[#fcd7cf] px-5 py-4 hover:bg-[#ce1212] hover:text-white transition-all duration-500"></i>
+            <p class="text-xl mt-7">Ullamco laboris ladore lore pan eiusmod</p>
+            <p class="text-gray-500 mt-7">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt </p>
+        </div>
+
+        <div class="w-[100%] pb-3 mb-4 lg:w-[253.33px] pt-[60px] ps-7 pe-7 text-center bg-white ">
+            <i
+                class=" text-4xl fa-solid fa-inbox rounded-full text-[#ce1212] bg-[#fcd7cf] px-5 py-4 hover:bg-[#ce1212] hover:text-white transition-all duration-500"></i>
+            <p class="text-xl mt-7">Labore consequatur incidid dolore</p>
+            <p class="text-gray-500 mt-7">Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis
+                facere</p>
+        </div>
+    </div>
+
+
+    <!-- counter -->
+    <div class="counter lg:ps-[60px] lg:pe-[60px] flex flex-col lg:flex-row justify-between items-center "
+        style="background-image: url(./images/counter-bg.jpg); height: 330px; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: 0.9;">
+        <div class="pb-5">
+            <h1 class="count text-white text-5xl font-medium">232</h1>
+            <p class="text-xl text-white pt-2 font-medium">Clients</p>
+        </div>
+        <div>
+            <h1 class="count text-white text-5xl font-medium">521</h1>
+            <p class="text-xl text-white pt-2 font-medium">Projects</p>
+        </div>
+        <div>
+            <h1 class="count text-white text-5xl font-medium ps-10 lg:ps-0">1453</h1>
+            <p class="text-xl text-white pt-2 font-medium">Hours Of Support</p>
+        </div>
+        <div>
+            <h1 class=" count text-white text-5xl font-medium">32</h1>
+            <p class="text-xl text-white pt-2 font-medium">Workers</p>
+        </div>
+    </div>
+
+
+    <!-- Menu page  -->
+    <div class="mt-[65px] menu-cont bg-white">
+        <h6 class="text-md text-gray-500 text-center pb-3">OUR MENU</h6>
+        <h1 class="text-center text-[40px] font-serif">Check Our <span class="text-[#ce1212]">Yummy Menu</span></h1>
+    </div>
+
+    <div class="mt-4 lg:mt-[55px]  lg:ps-[60px] lg:pe-[60px]">
+        <ul class="flex flex-row lg:flex-row justify-between mx-auto w-[100%] lg:w-[400px]  ">
+            <li><a href="" class="text-gray-700 text-xl pb-1 border-b-2 border-[#ce1212] ">Starters</a></li>
+            <li><a href="" class="text-gray-700 text-xl pb-1 border-b-2 hover:border-[#ce1212] ">Breakfast</a></li>
+            <li><a href="" class="text-gray-700 text-xl pb-1 border-b-2 hover:border-[#ce1212] ">Lunch</a></li>
+            <li><a href="" class="text-gray-700 text-xl pb-1 border-b-2 hover:border-[#ce1212] ">Dinner</a></li>
+        </ul>
+        <div class="mt-9 menu-cont bg-white">
+            <h6 class="text-sm text-gray-500 text-center">MENU</h6>
+            <h1 class="text-center text-[33px] font-serif text-[#ce1212]">Starters</h1>
+        </div>
+
+        <div class="mt-10 menu-items flex flex-col lg:flex-row justify-center items-center">
+            <div class="w-[100%] lg:w-[386.66px] text-center ">
+                <img class="mx-auto" src="./images/menu-item-1.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Magnam Tiste</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$5.95</p>
+            </div>
+            <div class="w-[100%] lg:w-[386.66px] text-center">
+                <img class="mx-auto" src="./images/menu-item-2.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Aut Luia</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$14.95</p>
+            </div>
+            <div class="w-[100%] lg:w-[386.66px] text-center">
+                <img class="mx-auto " src="./images/menu-item-3.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Est Eligendi</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$8.95</p>
+            </div>
+        </div>
+
+        <div class="mt-10 mb-10 menu-items flex flex-col lg:flex-row justify-center items-center">
+            <div class="w-[100%] lg:w-[386.66px] text-center ">
+                <img class="mx-auto" src="./images/menu-item-4.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Eos Luibusdam</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$12.95</p>
+            </div>
+            <div class="w-[100%] lg:w-[386.66px] text-center">
+                <img class=" mx-auto " src="./images/menu-item-5.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Eos Luibusdam</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$12.95</p>
+            </div>
+            <div class="w-[100%] lg:w-[386.66px] text-center">
+                <img class="mx-auto " src="./images/menu-item-6.png" height="250px" width="80%" alt="">
+                <h1 class="text-2xl pt-2">Laboriosam Direva</h1>
+                <p class="text-base pt-1 text-gray-500">Lorem, deren, trataro, filede, nerada</p>
+                <p class="text-2xl pt-1 font-medium text-[#ce1212]">$9.95</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Chefs -->
+    <div class="mt-[85px] menu-cont bg-white">
+        <h6 class="text-md text-gray-500 text-center pb-3">CHEFS</h6>
+        <h1 class="text-center text-[40px] font-serif">Our<span class="text-[#ce1212]">Proffesional Chefs</span></h1>
+    </div>
+
+
+    <div class="main-chefs  mt-[70px] flex flex-col lg:flex-row justify-between items-center lg:ps-[60px] lg:pe-[60px]">
+        <div
+            class="w-[80%] mt-4 lg:w-[350px] h-[560px] shadow-xl bg-white text-center lg:hover:w-[380px] lg:hover:h-[580px] transition-all duration-500">
+            <div class="chefs-img mx-auto">
+                <img class="mx-auto" src="./images/chefs-1.jpg" height="200px" width="300px" alt="">
+            </div>
+            <div class=" chefs-cont px-3 pt-5 ps-5 pe-5">
+                <h1 class="text-xl font-medium">Walter White</h1>
+                <h6 class=" pt-1 text-gray-500">Master Chef</h6>
+                <p class="pt-5">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
+                    Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+            </div>
+        </div>
+
+        <div
+            class="w-[80%] mt-4 lg:w-[350px] h-[560px] shadow-xl bg-white text-center lg:hover:w-[380px] lg:hover:h-[580px] transition-all duration-500">
+            <div class="chefs-img">
+                <img class="mx-auto" src="./images/chefs-2.jpg" height="200px" width="300px" alt="">
+            </div>
+            <div class="chefs-cont px-3 pt-5 ps-5 pe-5">
+                <h1 class="text-xl font-medium">Sarah Jhonson</h1>
+                <h6 class=" pt-1 text-gray-500">Patissier</h6>
+                <p class="pt-5 ">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima
+                    suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+            </div>
+        </div>
+
+        <div
+            class="w-[80%] mt-4 lg:w-[350px] lg:h-[560px] shadow-xl bg-white text-center lg:hover:w-[370px] lg:hover:h-[580px] transition-all duration-500">
+            <div class="chefs-img">
+                <img class="mx-auto" src="./images/chefs-3.jpg" height="200px" width="300px" alt="">
+            </div>
+            <div class="chefs-cont px-3 pt-5 ps-5 pe-5">
+                <h1 class="text-xl font-medium">William Anderson</h1>
+                <h6 class=" pt-1 text-gray-500">Cook</h6>
+                <p class="pt-5">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
+                    Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- need help -->
+
+    <div class="mt-[55px] menu-cont bg-white">
+        <h6 class="text-md text-gray-500 text-center pb-3">CONTACT</h6>
+        <h1 class="text-center text-[40px] font-serif">Need Help? <span class="text-[#ce1212]">Contact Us</span></h1>
+    </div>
+
+
+    <div class="map-img ps-[60px] pe-[60px]">
+        <div class="pt-[50px]" style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                    href="https://www.gps.ie/">gps vehicle tracker</a></iframe></div>
+    </div>
+
+    <div class="main-add grid lg:grid-cols-2  gap-7 mt-10  lg:ps-[60px] lg:pe-[60px]">
+        <div class=" flex address w-[95%] lg:w-[550px] shadow-lg ps-10 py-4 ">
+            <div class="icon me-4">
+                <i class="fa-solid fa-location-dot text-2xl bg-[#ce1212] text-white p-3 ps-4 pe-4 rounded-[50%]"></i>
+            </div>
+            <div class="cont">
+                <h1 class="text-gray-600 text-xl font-medium">Address</h1>
+                <p class="text-sm">A108 Adam Street, New York, NY 535022</p>
+            </div>
+        </div>
+
+        <div class=" flex address w-[95%] lg:w-[550px] shadow-lg ps-10 py-4 ">
+            <div class="icon me-4">
+                <i class="fa-solid fa-phone text-2xl bg-[#ce1212] text-white p-3 ps-4 pe-4 rounded-[50%]"></i>
+            </div>
+            <div class="cont">
+                <h1 class="text-gray-600 text-xl font-medium">Call Us</h1>
+                <p class="text-sm">+1 5589 55488 55</p>
+            </div>
+        </div>
+
+        <div class=" flex address w-[95%] lg:w-[550px] shadow-lg ps-10 py-4 ">
+            <div class="icon me-4">
+                <i class="fa-solid fa-envelope text-2xl bg-[#ce1212] text-white p-3 ps-4 pe-4 rounded-[50%]"></i>
+            </div>
+            <div class="cont">
+                <h1 class="text-gray-600 text-xl font-medium">Email Us</h1>
+                <p class="text-sm">info@example.com</p>
+            </div>
+        </div>
+
+        <div class=" flex address  w-[95%] lg:w-[550px] shadow-lg ps-10 py-4 ">
+            <div class="icon me-4">
+                <i class="fa-solid fa-clock-rotate-left text-2xl bg-[#ce1212] text-white p-3 ps-4 pe-4 rounded-[50%]"></i>
+            </div>
+            <div class="cont">
+                <h1 class="text-gray-600 text-xl font-medium">Opening Hours</h1>
+                <p class="text-sm">Mon-Sat: 11AM - 23PM; Sunday: Closed</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer mt-[70px] py-8 bg-gray-700 lg:ps-[60px] lg:pe-[60px]">
+
+        <div class="main-footer flex flex-col lg:flex-row justify-between items-center ">
+            <div class="add flex justify-center mb-5">
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot text-2xl text-[#ce1212] pe-6 lg:pe-4"></i>
+                </div>
+                <div class="cont">
+                    <h1 class="text-white text-lg font-medium">Address</h1>
+                    <p class="text-sm text-white">A108 Adam Street</p>
+                    <p class="text-sm text-white">New York, NY 535022</p>
+                </div>
+            </div>
+    
+            <div class="add flex justify-center mb-5">
+                <div class="icon">
+                    <i class="fa-solid fa-phone text-2xl text-[#ce1212] pe-3 lg:pe-4"></i>
+                </div>
+                <div class="cont">
+                    <h1 class="text-white text-lg font-medium">Contact</h1>
+                    <p class="text-sm text-white">Phone: +1 5589 55488 55</p>
+                    <p class="text-sm text-white">Email: info@example.com</p>
+                </div>
+            </div>
+    
+            <div class="add flex justify-center mb-5">
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot text-2xl text-[#ce1212] pe-4"></i>
+                </div>
+                <div class="cont">
+                    <h1 class="text-white text-lg font-medium">Opening Hours</h1>
+                    <p class="text-sm text-white">Mon-Sat: 11AM - 23PM</p>
+                    <p class="text-sm text-white">Sunday: Closed</p>
+                </div>
+            </div>
+    
+            <div class="icon-follow">
+                <div class="cont">
+                    <h1 class="text-white text-lg font-medium">Follow Us</h1>
+                </div>
+                
+                <div class="icon mt-4">
+                    <i class="fa-brands fa-x-twitter text-xl text-white border-2 border-white p-2 ps-3 pe-3 rounded-[50%] hover:text-[#ce1212] hover:border-[#ce1212]"></i>
+                    <i class="fa-brands fa-facebook text-xl text-white border-2 border-white p-2 ps-3 pe-3 rounded-[50%] hover:text-[#ce1212] hover:border-[#ce1212]"></i>
+                    <i class="fa-brands fa-instagram text-xl text-white border-2 border-white p-2 ps-3 pe-3 rounded-[50%] hover:text-[#ce1212] hover:border-[#ce1212]"></i>
+                    <i class="fa-brands fa-linkedin text-xl text-white border-2 border-white p-2 ps-3 pe-3 rounded-[50%] hover:text-[#ce1212] hover:border-[#ce1212]"></i>
+                </div>
+            </div>
+        </div>
+       
+        <hr class="mt-10 mb-5">
+        <div class="text-center">
+            <p class="text-sm text-white">© Copyright Yummy All Rights Reserved</p>
+            <p class="text-white pt-2">Designed by <span class="text-[#ce1212]">Jils patel</span></p>
+        </div>
+        
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var counters = $(".count");
+            var countersQuantity = counters.length;
+            var counter = [];
+
+            for (i = 0; i < countersQuantity; i++) {
+                counter[i] = parseInt(counters[i].innerHTML);
+            }
+
+            var count = function (start, value, id) {
+                var localStart = start;
+                setInterval(function () {
+                    if (localStart < value) {
+                        localStart++;
+                        counters[id].innerHTML = localStart;
+                    }
+                }, 40);
+            }
+
+            for (j = 0; j < countersQuantity; j++) {
+                count(0, counter[j], j);
+            }
+        });
+
+        const menudiv = document.querySelector(".menudiv")
+        function handelclick(e){
+            e.name=e.name=="menu" ? "close" : "menu"
+            if(e.name == "close"){
+                menudiv.classList.add("block")
+                menudiv.classList.remove("hidden")
+
+            }
+            else{
+                if(ename=e.name=="menu"){
+                    menudiv.classList.add("hidden")
+                    menudiv.classList.remove("block")
+                }
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
